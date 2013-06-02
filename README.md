@@ -5,6 +5,8 @@ Combine the two to make presentations that are easy to update on an ongoing basi
 
 I've used the [grouplens](http://www.grouplens.org/node/12) dataset to provide an example analysis.
 
+[Example analysis](http://dataewan.github.io/deck.js.and.dexy/) produced using this method.
+
 ## Prerequisites
 
 You need to have [dexy](http://www.dexy.it/) installed on your computer.
