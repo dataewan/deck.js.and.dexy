@@ -1,0 +1,6 @@
+assets:
+    - deck.js/*
+
+site:
+    - index.html|jinja:
+        - processdata.py|py       

@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block presentationtitle %}
+Reproduce this
+{% endblock %}
+
+{% block slides %}
+
+<div id="title-slide" class="slide">
+    <h1>Analysis of the grouplens dataset</h1>
+    <div class="speaker-info">
+      <div>Ewan Nicolson</div>
+      <div><a href="http://dataewan.github.io">dataewan.github.io</a></div>
+    </div>
+</div>
+
+<div id="summary" class="slide">
+  <h2>Summary</h2>
+  <p>
+  Data from the <a href="http://www.grouplens.org/node/12">grouplens </a>dataset has been crunched to find the most popular {{ d['processdata.py|py'].from_json().genre }} films.
+  </p>
+
+  <p>
+  {{ d['processdata.py|py'].from_json().number }} {{ d['processdata.py|py'].from_json().genre }} ratings are analysed here.
+  </p>
+
+
+  <ul>
+      <li>
+              <a href="./#topfilms">Top films</a>
+      </li>
+      <li>
+              <a href="./#worstfilm">Worst film</a>
+      </li>
+      <li>
+              <a href="./#mostpopularfemale">Films that are popular with women</a>
+      </li>
+      <li>
+              <a href="./#mostpopularmale">Films that are popular with men</a>
+      </li>
+  </ul>
+
+</div>
+
+<div id="topfilms" class="slide">
+  <h2>Top 10 films</h2>
+  <div class="small-left">
+    <p>
+    Here are the top 10 {{ d['processdata.py|py'].from_json().genre }} films.
+    </p>
+  </div>
+  <div class="large-right">
+    {{ d['processdata.py|py'].from_json().top10 }}
+  </div>
+</div>
+
+<div id="worstfilm" class="slide">
+  <h2>Worst film</h2>
+  <p>
+  The worst {{ d['processdata.py|py'].from_json().genre }} film in the dataset is {{ d['processdata.py|py'].from_json().worstfilm }}
+  </p>    
+</div>
+
+<div id="mostpopularfemale" class="slide">
+<h2>Most popular films with women</h2>
+<div class="small-left">
+Here are the top 10 {{ d['processdata.py|py'].from_json().genre }} films that rate more highly with women than men.
+</div>
+<div class="large-right">
+{{ d['processdata.py|py'].from_json().top_female_films }} 
+</div>
+</div>
+
+<div id="mostpopularmale" class="slide">
+<h2>Most popular films with men</h2>
+<div class="small-left">
+Here are the top 10 {{ d['processdata.py|py'].from_json().genre }} films that rate more highly with men than women.
+</div>
+<div class="large-right">
+{{ d['processdata.py|py'].from_json().top_male_films }} 
+</div>
+</div>
+{% endblock %}
