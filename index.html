@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+  <title>
+    
+Reproduce this
+
+  </title>
+	
+	<meta name="description" content="Making your deck.js using dexy">
+	<meta name="author" content="Ewan Nicolson">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="/deck.js/core/deck.core.css">
+	<link rel="stylesheet" href="/deck.js/extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="/deck.js/extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="/deck.js/extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="/deck.js/extensions/status/deck.status.css">
+	<link rel="stylesheet" href="/deck.js/extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="/deck.js/extensions/scale/deck.scale.css">
+	
+	<!-- Style theme. More available in /themes/style/ or create your own. -->
+	<link rel="stylesheet" href="/deck.js/themes/style/dataewan.css">
+	
+	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+	<link rel="stylesheet" href="/deck.js/themes/transition/horizontal-slide.css">
+	
+	<script src="/deck.js/modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+
+<!-- Begin slides -->
+
+
+<div id="title-slide" class="slide">
+    <h1>Analysis of the grouplens dataset</h1>
+    <div class="speaker-info">
+      <div>Ewan Nicolson</div>
+      <div><a href="http://dataewan.github.io">dataewan.github.io</a></div>
+    </div>
+</div>
+
+<div id="summary" class="slide">
+  <h2>Summary</h2>
+  <p>
+  Data from the <a href="http://www.grouplens.org/node/12">grouplens </a>dataset has been crunched to find the most popular Thriller films.
+  </p>
+
+  <p>
+  21872 Thriller ratings are analysed here.
+  </p>
+
+
+  <ul>
+      <li>
+              <a href="./#topfilms">Top films</a>
+      </li>
+      <li>
+              <a href="./#worstfilm">Worst film</a>
+      </li>
+      <li>
+              <a href="./#mostpopularfemale">Films that are popular with women</a>
+      </li>
+      <li>
+              <a href="./#mostpopularmale">Films that are popular with men</a>
+      </li>
+  </ul>
+
+</div>
+
+<div id="topfilms" class="slide">
+  <h2>Top 10 films</h2>
+  <div class="small-left">
+    <p>
+    Here are the top 10 Thriller films.
+    </p>
+  </div>
+  <div class="large-right">
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rating</th>
+    </tr>
+    <tr>
+      <th>title</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Close Shave, A (1995)</th>
+      <td> 4.491071</td>
+    </tr>
+    <tr>
+      <th>Rear Window (1954)</th>
+      <td> 4.387560</td>
+    </tr>
+    <tr>
+      <th>Usual Suspects, The (1995)</th>
+      <td> 4.385768</td>
+    </tr>
+    <tr>
+      <th>Third Man, The (1949)</th>
+      <td> 4.333333</td>
+    </tr>
+    <tr>
+      <th>Some Folks Call It a Sling Blade (1993)</th>
+      <td> 4.292683</td>
+    </tr>
+    <tr>
+      <th>Silence of the Lambs, The (1991)</th>
+      <td> 4.289744</td>
+    </tr>
+    <tr>
+      <th>North by Northwest (1959)</th>
+      <td> 4.284916</td>
+    </tr>
+    <tr>
+      <th>Manchurian Candidate, The (1962)</th>
+      <td> 4.259542</td>
+    </tr>
+    <tr>
+      <th>Vertigo (1958)</th>
+      <td> 4.251397</td>
+    </tr>
+    <tr>
+      <th>Innocents, The (1961)</th>
+      <td> 4.250000</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+
+<div id="worstfilm" class="slide">
+  <h2>Worst film</h2>
+  <p>
+  The worst Thriller film in the dataset is <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rating</th>
+    </tr>
+    <tr>
+      <th>title</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Bloody Child, The (1996)</th>
+      <td> 1</td>
+    </tr>
+  </tbody>
+</table>
+  </p>    
+</div>
+
+<div id="mostpopularfemale" class="slide">
+<h2>Most popular films with women</h2>
+<div class="small-left">
+Here are the top 10 Thriller films that rate more highly with women than men.
+</div>
+<div class="large-right">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Female rating</th>
+      <th>Male rating</th>
+      <th>Difference</th>
+    </tr>
+    <tr>
+      <th>title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Loch Ness (1995)</th>
+      <td> 4.000000</td>
+      <td> 1.000000</td>
+      <td> 3.000000</td>
+    </tr>
+    <tr>
+      <th>Babysitter, The (1995)</th>
+      <td> 3.000000</td>
+      <td> 1.000000</td>
+      <td> 2.000000</td>
+    </tr>
+    <tr>
+      <th>Turbulence (1997)</th>
+      <td> 4.000000</td>
+      <td> 2.428571</td>
+      <td> 1.571429</td>
+    </tr>
+    <tr>
+      <th>Heaven's Prisoners (1996)</th>
+      <td> 3.666667</td>
+      <td> 2.375000</td>
+      <td> 1.291667</td>
+    </tr>
+    <tr>
+      <th>Foreign Correspondent (1940)</th>
+      <td> 5.000000</td>
+      <td> 3.785714</td>
+      <td> 1.214286</td>
+    </tr>
+  </tbody>
+</table> 
+</div>
+</div>
+
+<div id="mostpopularmale" class="slide">
+<h2>Most popular films with men</h2>
+<div class="small-left">
+Here are the top 10 Thriller films that rate more highly with men than women.
+</div>
+<div class="large-right">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Female rating</th>
+      <th>Male rating</th>
+      <th>Difference</th>
+    </tr>
+    <tr>
+      <th>title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Killer (Bulletproof Heart) (1994)</th>
+      <td> 1.00</td>
+      <td> 4.000000</td>
+      <td> 3.000000</td>
+    </tr>
+    <tr>
+      <th>Legal Deceit (1997)</th>
+      <td> 2.00</td>
+      <td> 4.333333</td>
+      <td> 2.333333</td>
+    </tr>
+    <tr>
+      <th>Incognito (1997)</th>
+      <td> 2.25</td>
+      <td> 4.333333</td>
+      <td> 2.083333</td>
+    </tr>
+    <tr>
+      <th>Condition Red (1995)</th>
+      <td> 1.00</td>
+      <td> 3.000000</td>
+      <td> 2.000000</td>
+    </tr>
+    <tr>
+      <th>Hard Eight (1996)</th>
+      <td> 2.50</td>
+      <td> 4.230769</td>
+      <td> 1.730769</td>
+    </tr>
+  </tbody>
+</table> 
+</div>
+</div>
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+<!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../jquery-1.7.2.min.js"><\/script>')</script>
+
+<!-- Deck Core and extensions -->
+<script src="/deck.js/core/deck.core.js"></script>
+<script src="/deck.js/extensions/hash/deck.hash.js"></script>
+<script src="/deck.js/extensions/menu/deck.menu.js"></script>
+<script src="/deck.js/extensions/goto/deck.goto.js"></script>
+<script src="/deck.js/extensions/status/deck.status.js"></script>
+<script src="/deck.js/extensions/navigation/deck.navigation.js"></script>
+<script src="/deck.js/extensions/scale/deck.scale.js"></script>
+
+
+
+<!-- Initialize the deck -->
+<script>
+$(function() {
+	$.deck('.slide');
+});
+</script>
+
+</body>
+</html>
