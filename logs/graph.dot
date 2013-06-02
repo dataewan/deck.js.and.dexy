@@ -1,6 +1,0 @@
-digraph G {
-"BundleNode(assets)" -> "PatternNode(deck.js/*)";
-"Doc(index.html|jinja)" -> "Doc(processdata.py|py)";
-"BundleNode(site)" -> "Doc(index.html|jinja)";
-"Doc(index.html|jinja)" -> "Doc(processdata.py|py)";
-}
